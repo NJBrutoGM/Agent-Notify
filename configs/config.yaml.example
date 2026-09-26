@@ -1,0 +1,47 @@
+# Notification methods to enable
+methods:
+  sound: true
+  tts: true
+  desktop: true
+
+# Sound settings
+sound:
+  enabled: true
+  volume: 0.8
+  # Custom sounds per event (relative to sounds/ dir or absolute path)
+  events:
+    work_done: "success.wav"
+    attention_needed: "alert.wav"
+    error: "error.wav"
+    warning: "warning.wav"
+    info: "info.wav"
+
+# TTS settings
+tts:
+  enabled: true
+  voice: ""  # Empty = system default
+  rate: 1.0  # Speech rate
+  events:
+    work_done: "Work completed"
+    attention_needed: "Attention required"
+    error: "Error occurred"
+    warning: "Warning"
+    info: "Information"
+
+# Desktop notification settings
+desktop:
+  enabled: true
+  title: "Agent Notify"
+  events:
+    work_done: "Work completed"
+    attention_needed: "Attention needed"
+    error: "Error"
+    warning: "Warning"
+    info: "Info"
+
+# Daemon settings
+daemon:
+  enabled: false
+  socket_path: "~/.local/share/agent-notify/agent-notify.sock"
+  http_port: 8765
+  http_host: "127.0.0.1"
